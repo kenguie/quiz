@@ -1,0 +1,11 @@
+
+* {
+    border: 1px solid orange;
+}
+
+body {
+    background-image: url("../images/cybertron.jpg");
+    background-size: 100%;
+    background attachment: fixed;
+    background position: center;
+}
