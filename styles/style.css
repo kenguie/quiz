@@ -19,19 +19,53 @@ body {
     opacity: .85;
 }
 
-.sideswipeContainer {
-    
+.container {
+    height: 400px;
+}
+
+.autobotContainer {
+    height: 400px;
+    position: relative;
 }
 
 .sideswipe {
     height: 400px;
-    opacity: .85;
+    float: left;
 }
 
 .autobot {
     height: 250px;
     float: right;
-    opacity: .85;
+}
+
+.title {
+    color: orange;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    /*position: absolute;
+    top: 25%;
+    left: 40%;
+    padding-left: 10px;
+    padding-right: 20px;*/
+}
+
+h1 {
+    font-size: 6em;
+    font-family: 'Abel', sans-serif;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.instructions {
+    color: orange;
+    font-size: 1.75em;
+    text-align: center;
+    font-weight: bold;
+    background-color: blue;
+    opacity: .65;
+    z-index: -1;
+    position: relative;
 }
 
 .skywarpContainer {
@@ -40,18 +74,16 @@ body {
 
 .skywarp {
     height: 400px;
-    opacity: .85;
 }
 
 .decepticon {
     height: 250px;
     float: left;
-    opacity: .85;
 }
 
 .quizarea {
-    height: 500px;
+    height: 800px;
     width: 800px;
     margin: auto;
-    background-color: rgba(114, 108, 158, 0.35);
+    background-color: rgba(114, 108, 158, .35);
 }
