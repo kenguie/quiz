@@ -1,11 +1,57 @@
 
-* {
+/* {
     border: 1px solid orange;
-}
+} */
 
 body {
     background-image: url("../images/cybertron.jpg");
     background-size: 100%;
     background attachment: fixed;
     background position: center;
+}
+
+.top {
+    text-align: right;
+}
+
+.logo {
+    height: 75px;
+    opacity: .85;
+}
+
+.sideswipeContainer {
+    
+}
+
+.sideswipe {
+    height: 400px;
+    opacity: .85;
+}
+
+.autobot {
+    height: 250px;
+    float: right;
+    opacity: .85;
+}
+
+.skywarpContainer {
+    text-align: right;
+}
+
+.skywarp {
+    height: 400px;
+    opacity: .85;
+}
+
+.decepticon {
+    height: 250px;
+    float: left;
+    opacity: .85;
+}
+
+.quizarea {
+    height: 500px;
+    width: 800px;
+    margin: auto;
+    background-color: rgba(114, 108, 158, 0.35);
 }
