@@ -37,7 +37,50 @@ $(document).ready(function() {
         fact: "The 2 Lamborghini brothers seen on this page are the yellow Sunstreaker and red Sideswipe."
     }];
 
-  var questionNumber = 0;
-  var userScore = 0;
+  var questionCount = 0;
+  var score = 0;
+  
+  $(".quizarea").on("click", "#check", function() {
+        questionCount++;
+        nextquestion();
+  });
+  
+  function nextquestion () {
+    if (question < 5) {
+        $(".question").remove();
+        $(".answer input").remove();
+        $(".answer span").remove();
+        $("#theFact").remove();
+        
+        var newQuestion = '<span class="question">' +questions[questionCount].question+ '</span><br><div class="answers"><input type="radio" name="option" class="option" value="0"><span class="answer">'+questions[questionCount].choices[0]+'</span><br><input type="radio" name="option" class="option" value="1"><span class="answer">'+questions[questionCount].choices[1]+'</span><br><input type="radio" name="option" class="option" value="2"><span class="answer">'+questions[questionCount].choices[2]+'</span><br><input type="radio" name="option" class="option" value="3"><span class="answer">'+questions[questionCount].choices[3]+'</span><br></div><div id="button_holder"><input type="button" id="submit" value="Submit Answer"><span id="hint"></span><input type="button" id="retry_button" value="Try Again!"></div>';
+        
+        $(".quizarea").html(newQuestion);
+        var factoid=questions[questionCount-1].fact;
+        $("#theFact").html(factoid);       
+
+        }else {
+            
+        $(".question").remove();
+        $(".answers input").remove();
+        $(".answers span").remove();
+        $("#theFact").fadeOut();
+        $("#check").css("display", "none");
+        $(".retry").css("display", "inline");
+        var factoid= questions[questionCount-1].fact;
+        $("#theFact").html(factoid);
+        if (numberCorrect == 1) {
+            var finalScore = '<span id="final">Congratulations on finishing the quiz!  You correctly answered '+score+' question.'
+            $(".answers").html(finalScore);
+        
+        } else {
+            var finalScore = '<span id="final">Congratulations on finishing the quiz!  You correctly answered '+score+' questions.'
+                $(".answers").html(finalScore);
+        };
+  }; 
+  
+    
+        
+    
+  };
   
 });
